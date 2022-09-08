@@ -54,7 +54,7 @@ function testWhite(x) {
 
 const showAllTasks = () => {
   let tasks = localStorage.getItem("tasks");
-  tasks = JSON.parse(tasks);
+  tasks = JSON.parse(tasks) || [];
   const task = tasks
     .sort((a, b) => {
       return parseInt(b.id, 10) - parseInt(a.id, 10);
@@ -157,7 +157,7 @@ addTaskBtn.addEventListener("click", () => {
 
   let taskId = new Date().getTime().toString();
   let tasks = localStorage.getItem("tasks");
-  tasks = JSON.parse(tasks);
+  tasks = JSON.parse(tasks) || [];
   singleTask = {
     title,
     id: taskId,
