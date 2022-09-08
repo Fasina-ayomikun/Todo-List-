@@ -55,6 +55,7 @@ input {
 .darkmode .btn {
   background-color: var(--light-grey);
 }
+
 /* Navbar */
 .toggle-btn {
   display: flex;
@@ -143,6 +144,10 @@ input {
 .home-page-container .btn a {
   color: var(--white);
   font-weight: 500;
+}
+.darkmode .form-container .input-container input {
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8) inset;
 }
 /* Tasks */
 .task p {
