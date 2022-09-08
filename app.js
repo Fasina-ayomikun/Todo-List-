@@ -147,6 +147,7 @@ const editTask = (tasks, currentTargetId) => {
     alert.textContent = `Task updated`;
     const timeout = setTimeout(() => {
       alert.textContent = ``;
+      inputTask.value = ``;
     }, 1000);
   });
 };
@@ -176,6 +177,7 @@ addTaskBtn.addEventListener("click", () => {
     alert.textContent = `Task added`;
     const timeout = setTimeout(() => {
       alert.textContent = ``;
+      inputTask.value = ``;
     }, 1000);
     showAllTasks();
   }
