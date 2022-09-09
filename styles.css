@@ -226,9 +226,7 @@ input {
   display: flex;
   column-gap: 20px;
 }
-.model-container > button {
-  width: 30%;
-}
+
 .model-container p {
   font-weight: 600;
   color: var(--black);
@@ -238,6 +236,12 @@ input {
 
   transition: 0.3s ease-in-out;
 }
+
+@media (max-width: 954px) {
+  .model-container {
+    width: 300px;
+  }
+}
 @media (max-width: 756px) {
   .home-page h1 {
     font-size: 1.3rem;
@@ -246,6 +250,9 @@ input {
 @media (max-width: 590px) {
   .tasks {
     grid-template-columns: 1fr;
+  }
+  .model-container {
+    width: 70vw;
   }
 }
 @media (max-width: 375px) {
@@ -257,6 +264,15 @@ input {
     margin: 0 auto;
   }
   .task p {
+    font-size: 0.8rem;
+  }
+  .model-container > div {
+    column-gap: 10px;
+  }
+  .model-container button {
+    width: 100px;
+    display: flex;
+    align-items: center;
     font-size: 0.8rem;
   }
 
