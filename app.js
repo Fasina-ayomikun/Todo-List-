@@ -2,7 +2,9 @@ const toggleBtn = document.querySelector(".toggle-btn");
 const navLinks = document.querySelector(".nav-links");
 const closeBtn = document.querySelector(".close-btn");
 const darkmodeBtn = document.querySelector(".darkmode-btn");
-
+const model = document.querySelector(".model-section");
+const confirmBtn = document.querySelector(".confirm-btn");
+const cancelBtn = document.querySelector(".cancel-btn");
 toggleBtn.addEventListener("click", () => {
   navLinks.classList.toggle("show-navlinks");
 });
@@ -85,7 +87,15 @@ const showAllTasks = () => {
   deleteBtns.forEach((deleteBtn) => {
     deleteBtn.addEventListener("click", (e) => {
       const currentTargetId = e.target.parentElement.parentElement.id;
-      deleteTask(currentTargetId, tasks);
+      model.classList.add("show-model");
+
+      confirmBtn.addEventListener("click", () => {
+        deleteTask(currentTargetId, tasks);
+        model.classList.remove("show-model");
+      });
+      cancelBtn.addEventListener("click", () => {
+        model.classList.remove("show-model");
+      });
     });
   });
 
